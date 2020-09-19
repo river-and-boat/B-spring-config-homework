@@ -10,9 +10,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
-@SpringBootTest
+@SpringBootTest(properties = {"levelNumber=2"})
 @AutoConfigureMockMvc
-@ActiveProfiles("more")
 public class TestGetLevelWhenMoreThan1 {
     @Autowired
     private MockMvc mockMvc;
